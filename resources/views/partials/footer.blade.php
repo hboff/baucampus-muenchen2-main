@@ -48,7 +48,7 @@
           @else
           @endif
           @endforeach
-          <p id="w-node-_4aa0d7f3-2a4a-6a6b-69be-35f8e84120fd-e84120df" class="footer-text copyright">© 2023 Baucampus by <a href="https://ariet.is" target="_blank">Arietis </a>- <a href="legal/impressum">Impressum</a> - <a href="legal/datenschutz">Datenschutz</a>
+          <p id="w-node-_4aa0d7f3-2a4a-6a6b-69be-35f8e84120fd-e84120df" class="footer-text copyright">© 2023 Baucampus by <a href="https://ariet.is" target="_blank">Arietis </a>- <a href="/impressum">Impressum</a> - <a href="/datenschutz">Datenschutz</a>
           </p>
           </div>
       </div>
