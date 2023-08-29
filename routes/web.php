@@ -29,7 +29,7 @@ $routes = [
     'search',
     'leistungen',
     'impressum',
-    'datenschutzerklaerung',
+    'datenschutz',
     'detail_post',
     'detail_categories',
     '404',
