@@ -167,7 +167,7 @@ $p = 0;
       <div id="w-node-_97076ce2-b564-72fd-5dea-bb7697929515-d9f271c1" data-w-id="97076ce2-b564-72fd-5dea-bb7697929515" style="opacity:0" class="contact-card">
         <div class="card-name-text accent">Kontaktdaten</div>
         <a href="tel:+1(234)567-8910" class="contact-card-link">T: +49 5722 913800</a>
-        <a href="#" class="contact-card-link">E: info@baucampus</a>
+        <a href="#" class="contact-card-link">E: info@baucampus.de</a>
       </div>
       <div id="w-node-_844c8045-9dde-5abb-8fa5-927042016036-d9f271c1" data-w-id="844c8045-9dde-5abb-8fa5-927042016036" class="contact-card">
         <div class="card-name-text accent">Adresse München</div>
@@ -175,7 +175,7 @@ $p = 0;
       </div>
       <div id="w-node-_0b56dffc-648c-f30b-c130-2a2fb445b3f0-d9f271c1" data-w-id="0b56dffc-648c-f30b-c130-2a2fb445b3f0" class="contact-card">
         <div class="card-name-text accent">Hauptstelle Deutschland</div>
-        <a href="tel:+35391760711" class="contact-card-link">Telefon: +49 5722 913800<br>E-mail: info@baucampus</a>
+        <a href="tel:+35391760711" class="contact-card-link">Telefon: +49 5722 913800<br>E-mail: info@baucampus.de</a>
       </div>
     </div>
   </div>

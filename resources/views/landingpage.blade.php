@@ -127,7 +127,7 @@ $p = 0;
             </div>
           </div>
           <div class="uui-blogpost04_image-wrapper"></div>
-         
+
           <div class="uui-blogpost04_content-wrapper">
             <div class="uui-blogpost04_content">
               <div class="uui-text-rich-text w-richtext">
@@ -264,21 +264,11 @@ $p = 0;
                           <h2 class="uui-heading-medium-3">Buchen Sie ein Termin</h2>
                         </div>
                       </div>
-                      <div class="uui-contact01_component w-form">
-                        <form id="wf-form-Contact-01-form" name="wf-form-Contact-01-form" data-name="Contact 01 form" method="get" class="uui-contact01_form" data-wf-page-id="648d0891096d52bfd9f271cf" data-wf-element-id="48f21bd3-3947-0310-924c-9b51cd6d2956">
-                          <div class="uui-form-field-wrapper"><label for="Contact-01-name-2" class="uui-field-label">Name</label><input type="text" class="uui-form_input w-input" maxlength="256" name="Contact-01-name-2" data-name="Contact 01 Name 2" placeholder="Ihr Name" id="Contact-01-name-2" required=""><label for="Contact-01-name" class="uui-field-label">Telefonnummer</label><input type="tel" class="uui-form_input w-input" maxlength="256" name="Contact-01-tel" data-name="Contact 01 tel" placeholder="Ihre Telefonnummer" id="Contact-01-tel" required=""></div>
-                          <div class="uui-form-field-wrapper"><label for="Contact-01-email" class="uui-field-label">Email</label><input type="email" class="uui-form_input w-input" maxlength="256" name="Contact-01-email" data-name="Contact 01 email" placeholder="Ihre E-Mail Adresse" id="Contact-01-email" required=""></div>
-                          <div class="uui-form-field-wrapper"><label for="Contact-01-message" class="uui-field-label">Message</label><textarea id="Contact-01-message" name="Contact-01-message" maxlength="5000" data-name="Contact 01 message" placeholder="Ihre Nachricht..." required="" class="uui-form_input text-area w-input"></textarea></div><label id="Contact-1-Checkbox" class="w-checkbox uui-form-checkbox">
-                            <div class="w-checkbox-input w-checkbox-input--inputType-custom uui-form-checkbox-icon"></div><input type="checkbox" id="Contact-01-checkbox" name="Contact-01-checkbox" data-name="Contact 01 checkbox" required="" style="opacity:0;position:absolute;z-index:-1"><span for="Contact-01-checkbox" class="uui-form-checkbox-label w-form-label">Sie stimmen unserem <a href="/kontakt">Datenschutz</a> zu.</span>
-                          </label>
-                          <div id="w-node-_48f21bd3-3947-0310-924c-9b51cd6d296a-d9f271cf" class="uui-form-button-wrapper"><input type="submit" value="Send message" data-wait="Please wait..." id="w-node-_48f21bd3-3947-0310-924c-9b51cd6d296b-d9f271cf" class="uui-button-2 w-button"></div>
-                        </form>
-                        <div class="success-message-2 w-form-done">
-                          <div class="success-text-2">Thank you! Your submission has been received!</div>
-                        </div>
-                        <div class="error-message-2 w-form-fail">
-                          <div class="error-text-2">Oops! Something went wrong while submitting the form.</div>
-                        </div>
+                              <div class="calendly-inline-widget"
+                 data-url="https://calendly.com/oskarlohse/baucampus"
+                 style="min-width:320px;height:630px;"></div>
+<script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async=""></script>
+            </div>
                       </div>
                     </div>
                   </div>

@@ -3,7 +3,8 @@
 <html data-wf-page="648d0891096d52bfd9f271bb" data-wf-site="648d0891096d52bfd9f271dc" lang="fr">
 <head>
   <meta charset="utf-8">
-  <title>Bausachverstaendige - Baucampus {{$domainort}}</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Bausachverstaendige - Baucampus {{$domainort}}</title>
   <meta content="Entdecken Sie erstklassige Bauexperten, die Ihnen qualifizierte Unterstützung in allen Phasen Ihres Bauprojekts bieten. Wir stehen für Qualität, Kompetenz und transparente Prozesse im Bauwesen." name="description">
   <meta content="Bausachverstaendige - Baucampus {{$domainort}}" property="og:title">
   <meta content="Entdecken Sie erstklassige Bauexperten, die Ihnen qualifizierte Unterstützung in allen Phasen Ihres Bauprojekts bieten. Wir stehen für Qualität, Kompetenz und transparente Prozesse im Bauwesen." property="og:description">
@@ -181,10 +182,16 @@ $p = 0;
       </div>
     </div>
   </div>
-  <section data-poster-url="https://uploads-ssl.webflow.com/648d0891096d52bfd9f271dc/648dac4950ffe3644351be29_Sequence geschnitten-poster-00001.jpg" data-video-urls="https://uploads-ssl.webflow.com/648d0891096d52bfd9f271dc/648dac4950ffe3644351be29_Sequence geschnitten-transcode.mp4,https://uploads-ssl.webflow.com/648d0891096d52bfd9f271dc/648dac4950ffe3644351be29_Sequence geschnitten-transcode.webm" data-autoplay="true" data-loop="true" data-wf-ignore="true" id="main" data-w-id="5b27a792-d95e-b4d4-5cba-c7f138bec2ee" class="section-with-video w-background-video w-background-video-atom"><video id="5b27a792-d95e-b4d4-5cba-c7f138bec2ee-video" autoplay="" loop="" style="background-image:url(&quot;https://uploads-ssl.webflow.com/648d0891096d52bfd9f271dc/648dac4950ffe3644351be29_Sequence geschnitten-poster-00001.jpg&quot;)" muted="" playsinline="" data-wf-ignore="true" data-object-fit="cover">
-      <source src="https://uploads-ssl.webflow.com/648d0891096d52bfd9f271dc/648dac4950ffe3644351be29_Sequence geschnitten-transcode.mp4" data-wf-ignore="true">
+@foreach($media as $medias)
+          @if($medias->Ort == $domainort)
+  <section data-poster-url="https://uploads-ssl.webflow.com/648d0891096d52bfd9f271dc/648dac4950ffe3644351be29_Sequence geschnitten-poster-00001.jpg" data-video-urls="https://uploads-ssl.webflow.com/648d0891096d52bfd9f271dc/648dac4950ffe3644351be29_Sequence geschnitten-transcode.mp4,https://uploads-ssl.webflow.com/648d0891096d52bfd9f271dc/648dac4950ffe3644351be29_Sequence geschnitten-transcode.webm" data-autoplay="true" data-loop="true" data-wf-ignore="true" id="main" data-w-id="5b27a792-d95e-b4d4-5cba-c7f138bec2ee" class="section-with-video w-background-video w-background-video-atom">
+	  <video id="5b27a792-d95e-b4d4-5cba-c7f138bec2ee-video" autoplay="" loop="" style="background-image:url(&quot;https://uploads-ssl.webflow.com/648d0891096d52bfd9f271dc/648dac4950ffe3644351be29_Sequence geschnitten-poster-00001.jpg&quot;)" muted="" playsinline="" data-wf-ignore="true" data-object-fit="cover">
+
+	  <source src="{{$medias->video}}" data-wf-ignore="true">
       <source src="https://uploads-ssl.webflow.com/648d0891096d52bfd9f271dc/648dac4950ffe3644351be29_Sequence geschnitten-transcode.webm" data-wf-ignore="true">
     </video>
+	   @endif
+      @endforeach
     <header class="container">
       <div data-w-id="54adabf2-cbb8-69b7-1079-c5629eba7362" style="opacity:0" class="greed-for-slogan">
         <div class="line-element"></div>
@@ -285,7 +292,7 @@ $p = 0;
           </a>
         </li>
         <li>
-          <a href="/schimmlepilz" class="blog-card w-inline-block">
+          <a href="/schimmelpilz" class="blog-card w-inline-block">
             <div class="img-wrapper-blog-card">
               <div class="read-more-blog">Mehr Erfahren</div><img sizes="(max-width: 479px) 100vw, (max-width: 767px) 42vw, (max-width: 991px) 30vw, (max-width: 1439px) 31vw, 28vw" srcset="images/pilz-p-500.webp 500w, images/pilz-p-800.webp 800w, images/pilz-p-1080.webp 1080w, images/pilz.webp 1166w" src="images/pilz.webp" alt="" class="blog-prew-img">
             </div>
@@ -462,7 +469,7 @@ $p = 0;
                     <div class="uui-testimonial14_client-image-wrapper"><img src="images/thispersondoesnotexist2.jpg" loading="lazy" sizes="48px" srcset="images/thispersondoesnotexist2-p-500.jpg 500w, images/thispersondoesnotexist2-p-800.jpg 800w, images/thispersondoesnotexist2.jpg 1024w" alt="" class="uui-testimonial14_customer-image"></div>
                     <div class="uui-testimonial14_client-info">
                       <div class="uui-testimonial14_client-heading">Johann Schmidt</div>
-                      <div class="uui-text-size-small">Zufriedener Kunde, {{$domainort}}</div>
+                      <div class="uui-text-size-small">Zufriedener Kunde</div>
                     </div>
                   </div>
                 </div>
@@ -499,7 +506,7 @@ $p = 0;
                     <div class="uui-testimonial14_client-image-wrapper"><img src="images/thispersondoesnotexist.jpg" loading="lazy" sizes="48px" srcset="images/thispersondoesnotexist-p-500.jpg 500w, images/thispersondoesnotexist-p-800.jpg 800w, images/thispersondoesnotexist.jpg 1024w" alt="" class="uui-testimonial14_customer-image"></div>
                     <div class="uui-testimonial14_client-info">
                       <div class="uui-testimonial14_client-heading">Helga Bauer</div>
-                      <div class="uui-text-size-small">Zufriedene Kundin, {{$domainort}}</div>
+                      <div class="uui-text-size-small">Zufriedene Kundin</div>
                     </div>
                   </div>
                 </div>
@@ -536,7 +543,7 @@ $p = 0;
                     <div class="uui-testimonial14_client-image-wrapper"><img src="images/thispersondoesnotexist_1.jpg" loading="lazy" sizes="48px" srcset="images/thispersondoesnotexist_1-p-500.jpg 500w, images/thispersondoesnotexist_1-p-800.jpg 800w, images/thispersondoesnotexist_1.jpg 1024w" alt="" class="uui-testimonial14_customer-image"></div>
                     <div class="uui-testimonial14_client-info">
                       <div class="uui-testimonial14_client-heading">Friedrich Müller</div>
-                      <div class="uui-text-size-small">Zufriedener Kunde, {{$domainort}}</div>
+                      <div class="uui-text-size-small">Zufriedener Kunde</div>
                     </div>
                   </div>
                 </div>
@@ -573,7 +580,7 @@ $p = 0;
                     <div class="uui-testimonial14_client-image-wrapper"><img src="images/thispersondoesnotexist3.jpg" loading="lazy" sizes="48px" srcset="images/thispersondoesnotexist3-p-500.jpg 500w, images/thispersondoesnotexist3-p-800.jpg 800w, images/thispersondoesnotexist3.jpg 1024w" alt="" class="uui-testimonial14_customer-image"></div>
                     <div class="uui-testimonial14_client-info">
                       <div class="uui-testimonial14_client-heading">Elisabeth Hoffmann</div>
-                      <div class="uui-text-size-small">Zufriedene Kundin, {{$domainort}}</div>
+                      <div class="uui-text-size-small">Zufriedene Kundin</div>
                     </div>
                   </div>
                 </div>
@@ -610,7 +617,7 @@ $p = 0;
                     <div class="uui-testimonial14_client-image-wrapper"><img src="images/thispersondoesnotexist3.jpg" loading="lazy" sizes="48px" srcset="images/thispersondoesnotexist3-p-500.jpg 500w, images/thispersondoesnotexist3-p-800.jpg 800w, images/thispersondoesnotexist3.jpg 1024w" alt="" class="uui-testimonial14_customer-image"></div>
                     <div class="uui-testimonial14_client-info">
                       <div class="uui-testimonial14_client-heading">Katarina Fischer</div>
-                      <div class="uui-text-size-small">Zufriedene Kundin, {{$domainort}}</div>
+                      <div class="uui-text-size-small">Zufriedene Kundin</div>
                     </div>
                   </div>
                 </div>
@@ -647,7 +654,7 @@ $p = 0;
                     <div class="uui-testimonial14_client-image-wrapper"><img src="images/thispersondoesnotexist4.jpg" loading="lazy" sizes="48px" srcset="images/thispersondoesnotexist4-p-500.jpg 500w, images/thispersondoesnotexist4-p-800.jpg 800w, images/thispersondoesnotexist4.jpg 1024w" alt="" class="uui-testimonial14_customer-image"></div>
                     <div class="uui-testimonial14_client-info">
                       <div class="uui-testimonial14_client-heading">Stefan Schneider</div>
-                      <div class="uui-text-size-small">Zufriedener Kunde, {{$domainort}}</div>
+                      <div class="uui-text-size-small">Zufriedener Kunde</div>
                     </div>
                   </div>
                 </div>
@@ -839,12 +846,12 @@ $p = 0;
         <div id="w-node-_9ab59575-c0ef-d0eb-9bd1-882e58bbdbe5-d9f271bb">
           <div class="sub-heding">Standort</div>
           <h3 class="h1">Baucampus in {{$domainort}}</h3>
-          @foreach($media as $medias)
+         @foreach($media as $medias)
           @if($medias->Ort == $domainort)
           <p>Baucampus in {{$domainort}} bietet hochwertige Immobiliendienstleistungen und fügt dem gesamten Großraum {{$domainort}} einen Mehrwert hinzu. Unser lokales Team von Immobilienexperten verfügt über tiefgreifende Kenntnisse des {{$domainort}}er Immobilienmarktes, was es uns ermöglicht, genaue Bewertungen, gründliche Inspektionen, fundierte Beratungen und professionelle Schulungen anzubieten.</p><br>
           <p>{{$medias->ortText}}</p>
         </div>
-        <div id="w-node-cbf1b3bc-8d5c-db86-10f6-dd363cb5250b-d9f271bb" class="parallax-image-wrapper"><img src="{{$medias->img}}" sizes="(max-width: 479px) 100vw, (max-width: 767px) 91vw, (max-width: 991px) 52vw, (max-width: 1439px) 53vw, 685.7166748046875px" srcset="{{$medias->imgSet}}" alt="" class="parallax-image"></div>
+        <div id="w-node-cbf1b3bc-8d5c-db86-10f6-dd363cb5250b-d9f271bb" class="parallax-image-wrapper"><img src="images/Staedte/{{$medias->img}}" sizes="(max-width: 479px) 100vw, (max-width: 767px) 91vw, (max-width: 991px) 52vw, (max-width: 1439px) 53vw, 685.7166748046875px" alt="" class="parallax-image"></div>
       </div>
       @endif
       @endforeach
