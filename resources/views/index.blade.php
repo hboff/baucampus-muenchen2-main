@@ -851,7 +851,7 @@ $p = 0;
           <p>Baucampus in {{$domainort}} bietet hochwertige Immobiliendienstleistungen und fügt dem gesamten Großraum {{$domainort}} einen Mehrwert hinzu. Unser lokales Team von Immobilienexperten verfügt über tiefgreifende Kenntnisse des {{$domainort}}er Immobilienmarktes, was es uns ermöglicht, genaue Bewertungen, gründliche Inspektionen, fundierte Beratungen und professionelle Schulungen anzubieten.</p><br>
           <p>{{$medias->ortText}}</p>
         </div>
-        <div id="w-node-cbf1b3bc-8d5c-db86-10f6-dd363cb5250b-d9f271bb" class="parallax-image-wrapper"><img src="images/Staedte/{{$medias->img}}" sizes="(max-width: 479px) 100vw, (max-width: 767px) 91vw, (max-width: 991px) 52vw, (max-width: 1439px) 53vw, 685.7166748046875px" alt="" class="parallax-image"></div>
+        <div id="w-node-cbf1b3bc-8d5c-db86-10f6-dd363cb5250b-d9f271bb" class="parallax-image-wrapper"><img src="images/{{$medias->img}}" sizes="(max-width: 479px) 100vw, (max-width: 767px) 91vw, (max-width: 991px) 52vw, (max-width: 1439px) 53vw, 685.7166748046875px" alt="" class="parallax-image"></div>
       </div>
       @endif
       @endforeach
