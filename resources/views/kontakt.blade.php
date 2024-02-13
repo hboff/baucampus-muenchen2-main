@@ -142,27 +142,74 @@ $p = 0;
           </div>
         </div>
         <div class="contact-form-wrapper w-form">
-          <form id="wf-form-Contact-04-form" name="wf-form-Contact-04-form" data-name="Contact 04 form" method="get" class="contact-form" data-wf-page-id="648d0891096d52bfd9f271c1" data-wf-element-id="49967b82-f3e5-16b1-3011-09d3c34bc894">
-            <div class="form-field-two-column">
-              <div class="form-field-wrapper"><label for="Contact-04-first-name">Vorname</label><input type="text" class="form-input w-input" maxlength="256" name="Contact-04-first-name" data-name="Contact 04 first name" placeholder="Vorname" id="Contact-04-first-name" required=""></div>
-              <div class="form-field-wrapper"><label for="Contact-04-last-name">Nachname</label><input type="text" class="form-input w-input" maxlength="256" name="Contact-04-last-name" data-name="Contact 04 last name" placeholder="Nachname" id="Contact-04-last-name" required=""></div>
-            </div>
-            <div class="form-field-two-column">
-              <div class="form-field-wrapper"><label for="Contact-04-email">Email</label><input type="email" class="form-input w-input" maxlength="256" name="Contact-04-email" data-name="Contact 04 email" placeholder="muster@email-adresse.com" id="Contact-04-email" required=""></div>
-              <div class="form-field-wrapper"><label for="Contact-04-phone">Telefonnummer</label><input type="tel" class="form-input w-input" maxlength="256" name="Contact-04-phone" data-name="Contact 04 phone" placeholder="+49 123 555 555" id="Contact-04-phone" required=""></div>
-            </div>
-            <div class="form-field-wrapper"><label for="Contact-04-message" class="field-label"><strong>Nachricht</strong></label><textarea id="Contact-04-message" name="Contact-04-message" maxlength="5000" data-name="Contact 04 message" placeholder="Nachricht schreiben..." required="" class="form-input text-area w-input"></textarea></div>
-            <div id="w-node-_49967b82-f3e5-16b1-3011-09d3c34bc8d2-d9f271c1" class="form-button-wrapper"><input type="submit" value="Senden" data-wait="Please wait..." id="w-node-_49967b82-f3e5-16b1-3011-09d3c34bc8d3-d9f271c1" class="form-button w-button"></div>
-          </form>
-          <div class="success-message w-form-done">
-            <div class="success-text">Thank you! Your submission has been received!</div>
-          </div>
-          <div class="error-message w-form-fail">
-            <div class="error-text">Oops! Something went wrong while submitting the form.</div>
-          </div>
-        </div>
+        <div class="card-body">
+  
+  @if(Session::has('success'))
+      <div class="alert alert-success">
+          {{Session::get('success')}}
       </div>
-    </div>
+  @endif
+
+  <form method="POST" action="{{ route('contact.us.store') }}" id="contactUSForm">
+      {{ csrf_field() }}
+        
+      <div class="row">
+          <div class="col-md-6">
+              <div class="form-group">
+                  <strong>Name:</strong>
+                  <input type="text" name="name" class="form-control" placeholder="Name" value="{{ old('name') }}">
+                  @if ($errors->has('name'))
+                      <span class="text-danger">{{ $errors->first('name') }}</span>
+                  @endif
+              </div>
+          </div>
+          <div class="col-md-6">
+              <div class="form-group">
+                  <strong>Email:</strong>
+                  <input type="text" name="email" class="form-control" placeholder="Email" value="{{ old('email') }}">
+                  @if ($errors->has('email'))
+                      <span class="text-danger">{{ $errors->first('email') }}</span>
+                  @endif
+              </div>
+          </div>
+      </div>
+      <div class="row">
+          <div class="col-md-6">
+              <div class="form-group">
+                  <strong>Phone:</strong>
+                  <input type="text" name="phone" class="form-control" placeholder="Phone" value="{{ old('phone') }}">
+                  @if ($errors->has('phone'))
+                      <span class="text-danger">{{ $errors->first('phone') }}</span>
+                  @endif
+              </div>
+          </div>
+          <div class="col-md-6">
+              <div class="form-group">
+                  <strong>Subject:</strong>
+                  <input type="text" name="subject" class="form-control" placeholder="Subject" value="{{ old('subject') }}">
+                  @if ($errors->has('subject'))
+                      <span class="text-danger">{{ $errors->first('subject') }}</span>
+                  @endif
+              </div>
+          </div>
+      </div>
+      <div class="row">
+          <div class="col-md-12">
+              <div class="form-group">
+                  <strong>Message:</strong>
+                  <textarea name="message" rows="3" class="form-control">{{ old('message') }}</textarea>
+                  @if ($errors->has('message'))
+                      <span class="text-danger">{{ $errors->first('message') }}</span>
+                  @endif
+              </div>  
+          </div>
+      </div>
+
+      <div class="form-group text-center">
+          <button class="btn btn-success btn-submit">Submit</button>
+      </div>
+  </form>
+</div>
     <div class="contact-card-grid">
       <div id="w-node-_97076ce2-b564-72fd-5dea-bb7697929515-d9f271c1" data-w-id="97076ce2-b564-72fd-5dea-bb7697929515" style="opacity:0" class="contact-card">
         <div class="card-name-text accent">Kontaktdaten</div>
