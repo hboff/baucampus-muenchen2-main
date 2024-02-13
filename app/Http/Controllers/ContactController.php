@@ -48,7 +48,7 @@ class ContactController extends Controller
         ];
   
         // E-Mail senden
-        Mail::to('kontakt@baucampus.com')->send(new ContactMail($mailData));
+        Mail::to('kontakt@baucampus.de')->send(new ContactMail($mailData));
   
         // Weiterleitung mit Erfolgsmeldung
         return redirect()->back()->with(['success' => 'Thank you for contacting us. We will contact you shortly.']);
