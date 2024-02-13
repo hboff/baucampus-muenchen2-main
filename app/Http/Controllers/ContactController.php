@@ -4,13 +4,15 @@ namespace App\Http\Controllers;
   
 use Illuminate\Http\Request;
 use App\Models\Contact;
+use App\Mail\ContactMail;
+use Illuminate\Support\Facades\Mail;
   
 class ContactController extends Controller
 {
     /**
-     * Write code on Method
+     * Show the contact form.
      *
-     * @return response()
+     * @return \Illuminate\View\View
      */
     public function index()
     {
@@ -18,9 +20,10 @@ class ContactController extends Controller
     }
   
     /**
-     * Write code on Method
+     * Store contact form data and send an email.
      *
-     * @return response()
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\RedirectResponse
      */
     public function store(Request $request)
     {
@@ -32,9 +35,22 @@ class ContactController extends Controller
             'message' => 'required'
         ]);
   
-        Contact::create($request->all());
+        // Daten in der Datenbank speichern
+        $contact = Contact::create($request->all());
   
-        return redirect()->back()
-                         ->with(['success' => 'Thank you for contact us. we will contact you shortly.']);
+        // Daten für die E-Mail vorbereiten
+        $mailData = (object) [
+            'name' => $request->name,
+            'email' => $request->email,
+            'phone' => $request->phone,
+            'subject' => $request->subject,
+            'message' => $request->message,
+        ];
+  
+        // E-Mail senden
+        Mail::to('kontakt@baucampus.com')->send(new ContactMail($mailData));
+  
+        // Weiterleitung mit Erfolgsmeldung
+        return redirect()->back()->with(['success' => 'Thank you for contacting us. We will contact you shortly.']);
     }
 }
