@@ -199,6 +199,7 @@ $p = 0;
                     </div>
                     </div>
                     </div>
+                    </div>
     <div class="contact-card-grid">
       <div id="w-node-_97076ce2-b564-72fd-5dea-bb7697929515-d9f271c1" data-w-id="97076ce2-b564-72fd-5dea-bb7697929515" style="opacity:0" class="contact-card">
         <div class="card-name-text accent">Kontaktdaten</div>
