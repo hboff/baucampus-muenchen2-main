@@ -465,7 +465,8 @@ $domains = [
     ],
     
 ];
-
+Route::get('contact-us', [ContactController::class, 'index']);
+Route::post('contact-us', [ContactController::class, 'store'])->name('contact.us.store');
 
 foreach ($domains as $domain => $domainData) {
 Route::domain($domain)->group(function () use ($routes, $domainData) {
