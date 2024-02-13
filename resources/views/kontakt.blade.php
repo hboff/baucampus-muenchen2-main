@@ -155,15 +155,15 @@ $p = 0;
                               
                             <div class="form-field-two-column">
                             <div class="form-field-wrapper">
-                            <label for="Contact-04-first-name">Vorname</label>
-                                        <input type="text" name="name" class="form-control" placeholder="Name" value="{{ old('name') }}">
+                            <label for="Contact-04-first-name">Name</label>
+                                        <input type="text" name="name" class="form-input w-input" maxlength="256" placeholder="Name" value="{{ old('name') }}">
                                         @if ($errors->has('name'))
                                             <span class="text-danger">{{ $errors->first('name') }}</span>
                                         @endif
                                     </div>
                                     <div class="form-field-wrapper">
                                     <label for="Contact-04-email">Email</label>
-                                        <input type="text" name="email" class="form-control" placeholder="Email" value="{{ old('email') }}">
+                                        <input type="email" name="email" class="form-input w-input" maxlength="256" placeholder="muster@email-adresse.com" value="{{ old('email') }}">
                                         @if ($errors->has('email'))
                                             <span class="text-danger">{{ $errors->first('email') }}</span>
                                         @endif
@@ -172,14 +172,14 @@ $p = 0;
                             <div class="form-field-two-column">
                             <div class="form-field-wrapper">
                             <label for="Contact-04-phone">Telefonnummer</label>
-                                        <input type="text" name="phone" class="form-control" placeholder="Phone" value="{{ old('phone') }}">
+                                        <input type="text" name="tel" class="form-input w-input" maxlength="256" placeholder="+49 123 555 555" value="{{ old('phone') }}">
                                         @if ($errors->has('phone'))
                                             <span class="text-danger">{{ $errors->first('phone') }}</span>
                                         @endif
                                     </div>
                                     <div class="form-group">
                                     <label for="Contact-04-phone">Titel</label>
-                                        <input type="text" name="subject" class="form-control" placeholder="Subject" value="{{ old('subject') }}">
+                                        <input type="text" name="subject" class="form-input w-input" maxlength="256" placeholder="Titel" value="{{ old('subject') }}">
                                         @if ($errors->has('subject'))
                                             <span class="text-danger">{{ $errors->first('subject') }}</span>
                                         @endif
@@ -187,7 +187,7 @@ $p = 0;
                                 </div>
                             <div class="form-field-wrapper">
                             <label for="Contact-04-message" class="field-label"><strong>Nachricht</strong></label>
-                                        <textarea name="message" rows="3" class="form-control">{{ old('message') }}</textarea>
+                                        <textarea id="Contact-04-message" name="message" rows="3" class="form-input text-area w-input placeholder="Nachricht schreiben..." maxlength="5000">{{ old('message') }}</textarea>
                                         @if ($errors->has('message'))
                                             <span class="text-danger">{{ $errors->first('message') }}</span>
                                         @endif                                    
