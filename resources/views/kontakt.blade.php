@@ -172,7 +172,7 @@ $p = 0;
                             <div class="form-field-two-column">
                             <div class="form-field-wrapper">
                             <label for="Contact-04-phone">Telefonnummer</label>
-                                        <input type="text" name="tel" class="form-input w-input" maxlength="256" placeholder="+49 123 555 555" value="{{ old('phone') }}">
+                                        <input type="tel" name="phone" class="form-input w-input" maxlength="256" placeholder="+49 123 555 555" value="{{ old('phone') }}">
                                         @if ($errors->has('phone'))
                                             <span class="text-danger">{{ $errors->first('phone') }}</span>
                                         @endif
