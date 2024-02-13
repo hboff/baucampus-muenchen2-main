@@ -313,27 +313,62 @@ $p = 0;
               </div>
               <div data-w-id="cc10051b-aada-b03a-7716-0fd8a3bf66e3" style="-webkit-transform:translate3d(0, 10%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 10%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 10%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 10%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0">
                 <div class="brix---card-form w-form">
-                  <form id="wf-form-BRIX---Contact-V7" name="wf-form-BRIX---Contact-V7" data-name="BRIX - Contact V7" method="get" data-wf-page-id="648d0891096d52bfd9f271cf" data-wf-element-id="cc10051b-aada-b03a-7716-0fd8a3bf66e5">
-                    <div class="w-layout-grid brix---form-grid-2-columns">
-                      <div><label for="BRIX-Contact-Name-V7" class="brix---input-label">Name</label><input type="text" class="brix---input w-input" maxlength="256" name="BRIX---Contact-Name---V7" data-name="BRIX - Contact Name - V7" placeholder="Ihr Name" id="BRIX-Contact-Name-V7" required=""></div>
-                      <div><label for="BRIX-Contact-Email-V7" class="brix---input-label">Email</label><input type="email" class="brix---input w-input" maxlength="256" name="BRIX---Contact-Email---V7" data-name="BRIX - Contact Email - V7" placeholder="Ihre E-Mail" id="BRIX-Contact-Email-V7" required=""></div>
-                      <div><label for="BRIX-Contact-Phone-V7" class="brix---input-label">Telefon</label><input type="tel" class="brix---input w-input" maxlength="256" name="BRIX---Contact-Phone---V7" data-name="BRIX - Contact Phone - V7" placeholder="Ihre Telefonnummer" id="BRIX-Contact-Phone-V7" required=""></div>
-                      <div><label for="BRIX-Contact-Company-V7" class="brix---input-label">Unternehmen</label><input type="text" class="brix---input w-input" maxlength="256" name="BRIX-Contact-Company-V7" data-name="BRIX-Contact-Company-V7" placeholder="Ihr Unternehmen" id="BRIX-Contact-Company-V7"></div>
-                      <div id="w-node-cc10051b-aada-b03a-7716-0fd8a3bf66f7-d9f271cf"><label for="BRIX-Contact-Message-V7" class="brix---input-label">Nachricht</label><textarea id="BRIX-Contact-Message-V7" name="BRIX---Contact-Message---V7" maxlength="5000" data-name="BRIX - Contact Message - V7" placeholder="Ihre Nachricht" required="" class="brix---text-area w-input"></textarea></div><input type="submit" value="Nachricht Absenden" data-wait="Bitte warten..." id="w-node-cc10051b-aada-b03a-7716-0fd8a3bf66fb-d9f271cf" class="brix---btn-primary w-button">
+                <div class="contact-form-wrapper w-form">
+          <div class="card-body">
+  
+                        @if(Session::has('success'))
+                            <div class="alert alert-success">
+                                {{Session::get('success')}}
+                            </div>
+                        @endif
+                     
+                        <form method="POST" action="{{ route('contact.us.store') }}" id="contactUSForm">
+                            {{ csrf_field() }}
+                              
+                            <div class="form-field-two-column">
+                            <div class="form-field-wrapper">
+                            <label for="Contact-04-first-name">Name</label>
+                                        <input type="text" name="name" class="form-input w-input" maxlength="256" placeholder="Name" value="{{ old('name') }}">
+                                        @if ($errors->has('name'))
+                                            <span class="text-danger">{{ $errors->first('name') }}</span>
+                                        @endif
+                                    </div>
+                                    <div class="form-field-wrapper">
+                                    <label for="Contact-04-email">Email</label>
+                                        <input type="email" name="email" class="form-input w-input" maxlength="256" placeholder="muster@email-adresse.com" value="{{ old('email') }}">
+                                        @if ($errors->has('email'))
+                                            <span class="text-danger">{{ $errors->first('email') }}</span>
+                                        @endif
+                                    </div>                                
+                            </div>
+                            <div class="form-field-two-column">
+                            <div class="form-field-wrapper">
+                            <label for="Contact-04-phone">Telefonnummer</label>
+                                        <input type="tel" name="phone" class="form-input w-input"  maxlength="256" placeholder="+49 123 555 555" value="{{ old('phone') }}">
+                                        @if ($errors->has('phone'))
+                                            <span class="text-danger">{{ $errors->first('phone') }}</span>
+                                        @endif
+                                    </div>
+                                    <div class="form-group">
+                                    <label for="Contact-04-phone">Titel</label>
+                                        <input type="text" name="subject" class="form-input w-input" maxlength="256" placeholder="Titel" value="{{ old('subject') }}">
+                                        @if ($errors->has('subject'))
+                                            <span class="text-danger">{{ $errors->first('subject') }}</span>
+                                        @endif
+                                    </div>
+                                </div>
+                            <div class="form-field-wrapper">
+                            <label for="Contact-04-message" class="field-label"><strong>Nachricht</strong></label>
+                                        <textarea id="Contact-04-message" name="message" rows="3" class="form-input text-area w-input placeholder="Nachricht schreiben..." maxlength="5000">{{ old('message') }}</textarea>
+                                        @if ($errors->has('message'))
+                                            <span class="text-danger">{{ $errors->first('message') }}</span>
+                                        @endif                                    
+                            </div>
+                     
+                            <div id="w-node-_49967b82-f3e5-16b1-3011-09d3c34bc8d2-d9f271c1" class="form-button-wrapper"><input type="submit" value="Senden" data-wait="Please wait..." id="w-node-_49967b82-f3e5-16b1-3011-09d3c34bc8d3-d9f271c1" class="form-button w-button"></div>
+          
+                        </form>
                     </div>
-                  </form>
-                  <div class="brix---success-message w-form-done">
-                    <div><img src="/images/line-rounded-check-circle-white-brix-templates.svg" alt="Check - Elements Webflow Library - BRIX Templates" class="brix---icon-success-message-big">
-                      <h3 class="brix---color-neutral-803">Thank you</h3>
-                      <div>Thanks for reaching out. We will get back to you soon.</div>
-                    </div>
-                  </div>
-                  <div class="brix---error-message w-form-fail">
-                    <div>Oops! Something went wrong while submitting the form.</div>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
           <div data-w-id="cc10051b-aada-b03a-7716-0fd8a3bf6706" style="opacity:0" class="brix---contact-v7-half-bg-image-bottom">
             <div class="w-embed w-script">
