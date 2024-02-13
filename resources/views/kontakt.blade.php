@@ -15,7 +15,6 @@
   <meta content="Webflow" name="generator">
   <link href="css/normalize.css" rel="stylesheet" type="text/css">
   <link href="css/webflow.css" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css" />
   <link href="css/baucampus-fr-3d2c130f2c9eb3bf5def5f18fb.webflow.css" rel="stylesheet" type="text/css">
   <style>@media (min-width:992px) {html.w-mod-js:not(.w-mod-ix) [data-w-id="844c8045-9dde-5abb-8fa5-927042016036"] {opacity:0;}html.w-mod-js:not(.w-mod-ix) [data-w-id="0b56dffc-648c-f30b-c130-2a2fb445b3f0"] {opacity:0;}}@media (max-width:991px) and (min-width:768px) {html.w-mod-js:not(.w-mod-ix) [data-w-id="844c8045-9dde-5abb-8fa5-927042016036"] {opacity:0;}html.w-mod-js:not(.w-mod-ix) [data-w-id="0b56dffc-648c-f30b-c130-2a2fb445b3f0"] {opacity:0;}}</style>
   <link href="https://fonts.googleapis.com" rel="preconnect">
