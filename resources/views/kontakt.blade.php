@@ -15,6 +15,7 @@
   <meta content="Webflow" name="generator">
   <link href="css/normalize.css" rel="stylesheet" type="text/css">
   <link href="css/webflow.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css" />
   <link href="css/baucampus-fr-3d2c130f2c9eb3bf5def5f18fb.webflow.css" rel="stylesheet" type="text/css">
   <style>@media (min-width:992px) {html.w-mod-js:not(.w-mod-ix) [data-w-id="844c8045-9dde-5abb-8fa5-927042016036"] {opacity:0;}html.w-mod-js:not(.w-mod-ix) [data-w-id="0b56dffc-648c-f30b-c130-2a2fb445b3f0"] {opacity:0;}}@media (max-width:991px) and (min-width:768px) {html.w-mod-js:not(.w-mod-ix) [data-w-id="844c8045-9dde-5abb-8fa5-927042016036"] {opacity:0;}html.w-mod-js:not(.w-mod-ix) [data-w-id="0b56dffc-648c-f30b-c130-2a2fb445b3f0"] {opacity:0;}}</style>
   <link href="https://fonts.googleapis.com" rel="preconnect">
@@ -150,43 +151,64 @@ $p = 0;
                             </div>
                         @endif
                      
-                        <form method="POST" action="{{ route('contact.us.store') }}" id="wf-form-Contact-04-form" class="contact-form">
+                        <form method="POST" action="{{ route('contact.us.store') }}" id="contactUSForm">
                             {{ csrf_field() }}
                               
-                            <div class="form-field-two-column">                                
-                                    <div  class="form-field-wrapper">
-                                    <label for="Contact-04-first-name">Name</label>
-                                        <input type="text" name="name" class="form-input w-input" placeholder="Name" value="{{ old('name') }}">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <strong>Name:</strong>
+                                        <input type="text" name="name" class="form-control" placeholder="Name" value="{{ old('name') }}">
                                         @if ($errors->has('name'))
                                             <span class="text-danger">{{ $errors->first('name') }}</span>
                                         @endif
-                                    </div>                                
-                                <div class="form-field-two-column">
-                                <div class="form-field-wrapper">
-                                <label for="Contact-04-email">Email</label>
-                                        <input type="email" name="email" class="form-input w-input" placeholder="muster@email-adresse.com" value="{{ old('email') }}">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <strong>Email:</strong>
+                                        <input type="text" name="email" class="form-control" placeholder="Email" value="{{ old('email') }}">
                                         @if ($errors->has('email'))
                                             <span class="text-danger">{{ $errors->first('email') }}</span>
                                         @endif
-                                </div>        
-                                <div class="form-field-wrapper">
-                                <label for="Contact-04-phone">Telefonnummer</label>
-                                        <input type="tel" name="phone" class="form-input w-input" placeholder="+49 123 555 555" value="{{ old('phone') }}">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <strong>Phone:</strong>
+                                        <input type="text" name="phone" class="form-control" placeholder="Phone" value="{{ old('phone') }}">
                                         @if ($errors->has('phone'))
                                             <span class="text-danger">{{ $errors->first('phone') }}</span>
                                         @endif
                                     </div>
                                 </div>
-                                <div class="form-field-wrapper">
-                                <label for="Contact-04-message" class="field-label"><strong>Nachricht</strong></label>
-                                        <textarea id="Contact-04-message" name="message" maxlength="5000" placeholder="Nachricht schreiben...">{{ old('message') }}</textarea>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <strong>Subject:</strong>
+                                        <input type="text" name="subject" class="form-control" placeholder="Subject" value="{{ old('subject') }}">
+                                        @if ($errors->has('subject'))
+                                            <span class="text-danger">{{ $errors->first('subject') }}</span>
+                                        @endif
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <strong>Message:</strong>
+                                        <textarea name="message" rows="3" class="form-control">{{ old('message') }}</textarea>
                                         @if ($errors->has('message'))
                                             <span class="text-danger">{{ $errors->first('message') }}</span>
                                         @endif
                                     </div>  
                                 </div>
                             </div>
-                            <div id="w-node-_49967b82-f3e5-16b1-3011-09d3c34bc8d2-d9f271c1" class="form-button-wrapper"><input type="submit" value="Senden" data-wait="Please wait..." id="w-node-_49967b82-f3e5-16b1-3011-09d3c34bc8d3-d9f271c1" class="form-button w-button"></div>
+                     
+                            <div class="form-group text-center">
+                                <button class="btn btn-success btn-submit">Submit</button>
+                            </div>
                         </form>
                     </div>
     <div class="contact-card-grid">
