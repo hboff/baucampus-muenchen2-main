@@ -193,9 +193,8 @@ $p = 0;
                                         @endif                                    
                             </div>
                      
-                            <div class="form-group text-center">
-                                <button class="btn btn-success btn-submit">Submit</button>
-                            </div>
+                            <div id="w-node-_49967b82-f3e5-16b1-3011-09d3c34bc8d2-d9f271c1" class="form-button-wrapper"><input type="submit" value="Senden" data-wait="Please wait..." id="w-node-_49967b82-f3e5-16b1-3011-09d3c34bc8d3-d9f271c1" class="form-button w-button"></div>
+          
                         </form>
                     </div>
     <div class="contact-card-grid">
