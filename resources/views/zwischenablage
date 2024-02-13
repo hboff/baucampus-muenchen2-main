@@ -1,0 +1,21 @@
+<form id="wf-form-Contact-04-form" name="wf-form-Contact-04-form" data-name="Contact 04 form" method="get" class="contact-form" data-wf-page-id="648d0891096d52bfd9f271c1" data-wf-element-id="49967b82-f3e5-16b1-3011-09d3c34bc894">
+            <div class="form-field-two-column">
+              <div class="form-field-wrapper"><label for="Contact-04-first-name">Vorname</label><input type="text" class="form-input w-input" maxlength="256" name="Contact-04-first-name" data-name="Contact 04 first name" placeholder="Vorname" id="Contact-04-first-name" required=""></div>
+              <div class="form-field-wrapper"><label for="Contact-04-last-name">Nachname</label><input type="text" class="form-input w-input" maxlength="256" name="Contact-04-last-name" data-name="Contact 04 last name" placeholder="Nachname" id="Contact-04-last-name" required=""></div>
+            </div>
+            <div class="form-field-two-column">
+              <div class="form-field-wrapper"><label for="Contact-04-email">Email</label><input type="email" class="form-input w-input" maxlength="256" name="Contact-04-email" data-name="Contact 04 email" placeholder="muster@email-adresse.com" id="Contact-04-email" required=""></div>
+              <div class="form-field-wrapper"><label for="Contact-04-phone">Telefonnummer</label><input type="tel" class="form-input w-input" maxlength="256" name="Contact-04-phone" data-name="Contact 04 phone" placeholder="+49 123 555 555" id="Contact-04-phone" required=""></div>
+            </div>
+            <div class="form-field-wrapper"><label for="Contact-04-message" class="field-label"><strong>Nachricht</strong></label><textarea id="Contact-04-message" name="Contact-04-message" maxlength="5000" data-name="Contact 04 message" placeholder="Nachricht schreiben..." required="" class="form-input text-area w-input"></textarea></div>
+            <div id="w-node-_49967b82-f3e5-16b1-3011-09d3c34bc8d2-d9f271c1" class="form-button-wrapper"><input type="submit" value="Senden" data-wait="Please wait..." id="w-node-_49967b82-f3e5-16b1-3011-09d3c34bc8d3-d9f271c1" class="form-button w-button"></div>
+          </form>
+          <div class="success-message w-form-done">
+            <div class="success-text">Thank you! Your submission has been received!</div>
+          </div>
+          <div class="error-message w-form-fail">
+            <div class="error-text">Oops! Something went wrong while submitting the form.</div>
+          </div>
+        </div>
+      </div>
+    </div>
