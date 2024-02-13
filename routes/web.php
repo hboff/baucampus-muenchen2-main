@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\OrteatController;
 use App\Http\Controllers\GutachterController;
+use App\Http\Controllers\ContactController;
 use Illuminate\Support\Facades\DB;
 
 
