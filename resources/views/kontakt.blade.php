@@ -177,6 +177,13 @@ $p = 0;
                                             <span class="text-danger">{{ $errors->first('phone') }}</span>
                                         @endif
                                     </div>
+                                    <div class="form-group">
+                                    <label for="Contact-04-phone">Titel</label>
+                                        <input type="text" name="subject" class="form-control" placeholder="Subject" value="{{ old('subject') }}">
+                                        @if ($errors->has('subject'))
+                                            <span class="text-danger">{{ $errors->first('subject') }}</span>
+                                        @endif
+                                    </div>
                                 </div>
                             <div class="form-field-wrapper">
                             <label for="Contact-04-message" class="field-label"><strong>Nachricht</strong></label>
